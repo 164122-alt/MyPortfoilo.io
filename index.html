@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[ชื่อ-นามสกุล] // PORTFOLIO ARCHIVE</title>
+    <title>[ชื่อ-นามสกุล] // PORTFOLIO ☁️</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font (Kanit) -->
+    <!-- Google Font (Mitr - ฟอนต์โค้งมนน่ารัก) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         body { 
-            font-family: 'Kanit', sans-serif; 
-            background-color: #F3F0E6;
-            color: #111111;
+            font-family: 'Mitr', sans-serif; 
+            background-color: #F0F9FF; /* Sky 50 */
+            color: #1E293B;
         }
 
         /* 📐 สัดส่วนกระดาษ A4 แนวตั้ง */
@@ -23,102 +23,99 @@
             aspect-ratio: 210 / 297;
         }
 
-        /* ⚡ Neo-Brutalist Styling */
-        .brutal-card {
-            background-color: #FFFFFF;
-            border: 3px solid #111111;
-            box-shadow: 6px 6px 0px #111111;
-            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        /* ☁️ Cute Soft Cards */
+        .cute-card {
+            background: #FFFFFF;
+            border: 2px solid #E0F2FE;
+            border-radius: 28px;
+            box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.12);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-        .brutal-card:hover {
-            transform: translate(-3px, -3px);
-            box-shadow: 10px 10px 0px #111111;
-        }
-
-        .brutal-tag {
-            background-color: #CCFF00;
-            border: 2px solid #111111;
-            font-weight: 800;
+        .cute-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            border-color: #38BDF8;
+            box-shadow: 0 20px 30px -5px rgba(56, 189, 248, 0.25);
         }
 
-        .brutal-btn {
-            background-color: #CCFF00;
-            border: 3px solid #111111;
-            box-shadow: 4px 4px 0px #111111;
-            font-weight: 800;
-            transition: all 0.15s ease;
+        /* เอฟเฟกต์ปุ่มมนนุ่ม */
+        .cute-btn {
+            background-color: #38BDF8;
+            color: white;
+            border-radius: 9999px;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35);
+            transition: all 0.2s ease;
         }
-        .brutal-btn:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0px #111111;
-            background-color: #b8e600;
+        .cute-btn:hover {
+            background-color: #0284C7;
+            transform: scale(1.05);
         }
     </style>
 </head>
-<body class="antialiased selection:bg-black selection:text-[#CCFF00]">
+<body class="antialiased selection:bg-sky-200 selection:text-sky-900">
 
-    <!-- 💥 TOP MARQUEE BANNER -->
-    <div class="bg-[#111111] text-[#CCFF00] py-2 px-4 border-b-4 border-black font-black text-xs tracking-widest overflow-hidden whitespace-nowrap flex justify-between items-center">
-        <span>● PORTFOLIO ARCHIVE // ADMISSION 2026 ●</span>
-        <span class="hidden sm:inline">CONFIDENTIAL DOCUMENT / FOR EXAMINATION ONLY</span>
-        <a href="#contact" class="bg-[#CCFF00] text-black px-3 py-0.5 text-[11px] font-extrabold border border-black uppercase hover:bg-white transition">
-            CONTACT
-        </a>
-    </div>
-
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-12">
-
-        <!-- ⚡ SECTION 1: HERO ID CARD -->
-        <section class="brutal-card p-6 sm:p-8 relative bg-white">
-            <!-- Badge ตกแต่งมุม -->
-            <div class="absolute -top-4 -right-2 brutal-tag px-4 py-1 text-xs text-black uppercase transform rotate-2">
-                OFFICIAL APPLICANT
+    <!-- ☁️ TOP NAVBAR -->
+    <header class="w-full py-3.5 px-4 sticky top-3 z-40">
+        <div class="max-w-6xl mx-auto bg-white/80 backdrop-blur-md border-2 border-sky-100 rounded-full px-5 py-2 flex justify-between items-center shadow-lg shadow-sky-100/50">
+            <div class="flex items-center gap-2">
+                <span class="text-xl">☁️</span>
+                <span class="text-xs font-semibold tracking-wider text-sky-600 uppercase">PORTFOLIO // [ปีการศึกษา]</span>
             </div>
+            <a href="#contact" class="cute-btn text-xs font-medium px-4 py-1.5 flex items-center gap-1">
+                <span>💌</span> ติดต่อ
+            </a>
+        </div>
+    </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-10">
+
+        <!-- 🎀 SECTION 1: HERO CONTAINER (การ์ดโปรไฟล์น่ารัก) -->
+        <section class="cute-card p-6 sm:p-10 bg-gradient-to-br from-white via-sky-50/50 to-cyan-50 relative overflow-hidden">
+            <!-- อิโมจิตกแต่งพื้นหลัง -->
+            <span class="absolute top-4 right-8 text-4xl opacity-20 pointer-events-none animate-bounce">✨</span>
+            <span class="absolute bottom-4 left-6 text-3xl opacity-20 pointer-events-none">🧸</span>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
                 
                 <!-- รูปโปรไฟล์ -->
                 <div class="md:col-span-4 lg:col-span-3">
-                    <div class="w-full aspect-a4 bg-gray-100 border-3 border-black relative flex flex-col items-center justify-center p-2 shadow-[4px_4px_0px_0px_#111]">
+                    <div class="w-full aspect-a4 rounded-3xl overflow-hidden bg-sky-100 border-4 border-white shadow-md relative flex flex-col items-center justify-center p-3 text-center group">
                         <!-- 📌 ใส่ลิงก์รูปโปรไฟล์ที่ src -->
                         <img src="path/to/profile.jpg" alt="Profile" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
-                        <span class="text-4xl mb-2">📸</span>
-                        <p class="font-extrabold text-xs uppercase">[ รูปโปรไฟล์ ]</p>
+                        <div class="w-14 h-14 bg-sky-200 text-sky-600 rounded-full flex items-center justify-center mb-2 text-2xl">💙</div>
+                        <p class="text-sky-700 font-medium text-xs">[ ใส่รูปโปรไฟล์ ]</p>
                     </div>
                 </div>
 
-                <!-- รายละเอียดโปรไฟล์ -->
+                <!-- ข้อความโปรไฟล์ -->
                 <div class="md:col-span-8 lg:col-span-9 space-y-4">
-                    <div>
-                        <span class="text-xs font-black bg-black text-white px-2.5 py-1 uppercase tracking-wider">
-                            CANDIDATE PROFILE
+                    <div class="space-y-1">
+                        <span class="inline-block text-xs font-medium text-sky-700 bg-sky-100 px-3 py-1 rounded-full border border-sky-200">
+                            ✨ Candidate Admission [ปีการศึกษา]
                         </span>
-                        <h1 class="text-3xl sm:text-5xl font-black text-black tracking-tight uppercase pt-3 leading-none">
-                            [ชื่อ-นามสกุล ภาษาอังกฤษ]
+                        <h1 class="text-2xl sm:text-4xl font-semibold text-sky-950 tracking-tight pt-1">
+                            [ชื่อ - นามสกุล ภาษาอังกฤษ]
                         </h1>
-                        <p class="text-base font-bold text-gray-700 pt-1">
-                            [นาย/นางสาว ชื่อ-นามสกุล ภาษาไทย] ([ชื่อเล่น])
-                        </p>
+                        <p class="text-sm font-medium text-sky-600">[นาย/นางสาว/ชื่อ-นามสกุล ภาษาไทย] ([ชื่อเล่น])</p>
                     </div>
 
-                    <!-- แถบคำโปรย -->
-                    <div class="bg-[#F3F0E6] p-4 border-2 border-black text-xs sm:text-sm font-medium leading-relaxed">
-                        "[ใส่ข้อความ แนะนำตัว หรือ Statement of Purpose สั้นๆ เช่น: มุ่งมั่นตั้งใจถ่ายทอดความรู้และความคิดสร้างสรรค์ผ่านผลงานดีไซน์ รวบรวมไว้ในพอร์ตโฟลิโอเล่มนี้เพื่อการเข้าศึกษาต่อในระดับอุดมศึกษา]"
+                    <!-- ข้อความแนะนำตัว -->
+                    <div class="bg-white/80 p-4 rounded-2xl border border-sky-100 text-xs sm:text-sm text-slate-600 leading-relaxed shadow-sm">
+                        🌸 [ใส่ข้อความแนะนำตัวสั้นๆ เช่น: สวัสดีค่ะ/ครับ หนู/ผมมุ่งมั่นที่จะเรียนรู้และตั้งใจสร้างสรรค์ผลงานอย่างเต็มที่ รวบรวมผลงานทั้งหมดไว้ในพอร์ตโฟลิโอนี้ค่ะ/ครับ]
                     </div>
 
-                    <!-- ตารางข้อมูลสเปก -->
+                    <!-- การ์ดสรุปข้อมูล 3 กล่อง -->
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 text-xs">
-                        <div class="p-3 bg-[#CCFF00] border-2 border-black font-extrabold">
-                            <span class="text-[10px] block opacity-70">SCHOOL</span>
-                            <span class="text-sm truncate block">[ชื่อโรงเรียน]</span>
+                        <div class="p-3 bg-white rounded-2xl border border-sky-100 text-center shadow-sm">
+                            <span class="text-sky-400 font-medium block text-[10px]">🏫 โรงเรียน</span>
+                            <span class="font-semibold text-slate-700 truncate block">[กรอกชื่อโรงเรียน]</span>
                         </div>
-                        <div class="p-3 bg-white border-2 border-black font-extrabold">
-                            <span class="text-[10px] block text-gray-500">PROGRAM</span>
-                            <span class="text-sm truncate block">[แผนการเรียน]</span>
+                        <div class="p-3 bg-white rounded-2xl border border-sky-100 text-center shadow-sm">
+                            <span class="text-sky-400 font-medium block text-[10px]">📚 แผนการเรียน</span>
+                            <span class="font-semibold text-slate-700 truncate block">[กรอกแผนการเรียน]</span>
                         </div>
-                        <div class="p-3 bg-black text-[#CCFF00] border-2 border-black font-extrabold">
-                            <span class="text-[10px] block opacity-70">GPAX</span>
-                            <span class="text-sm truncate block">[เกรดเฉลี่ย]</span>
+                        <div class="p-3 bg-sky-100 rounded-2xl border border-sky-200 text-center shadow-sm">
+                            <span class="text-sky-600 font-medium block text-[10px]">⭐ เกรดเฉลี่ย (GPAX)</span>
+                            <span class="font-bold text-sky-700 text-sm truncate block">[กรอกเกรดเฉลี่ย]</span>
                         </div>
                     </div>
                 </div>
@@ -127,117 +124,124 @@
         </section>
 
 
-        <!-- 🖼️ SECTION 2: GALLERY TITLE BAR -->
-        <div class="bg-black text-white p-4 border-3 border-black shadow-[5px_5px_0px_0px_#CCFF00] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-            <div class="flex items-center gap-3">
-                <span class="w-4 h-4 bg-[#CCFF00] border border-black inline-block"></span>
-                <h2 class="text-xl font-black tracking-wider uppercase">WORK SAMPLES // ผลงานทั้งหมด</h2>
+        <!-- 🎨 SECTION 2: GALLERY TITLE -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2 px-2">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">🖼️</span>
+                <div>
+                    <span class="text-xs font-semibold text-sky-500 uppercase tracking-wider">My Gallery</span>
+                    <h2 class="text-xl sm:text-2xl font-semibold text-sky-950">ผลงานทั้งหมด</h2>
+                </div>
             </div>
-            <span class="text-xs font-bold text-[#CCFF00] uppercase tracking-widest">[ CLICK CARD TO ZOOM A4 ]</span>
+            <span class="text-xs text-sky-600 bg-sky-100 px-3 py-1 rounded-full font-medium">
+                💡 คลิกที่ภาพเพื่อดูขนาดเต็ม A4
+            </span>
         </div>
 
 
-        <!-- 📦 SECTION 3: BRUTALIST GALLERY GRID -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="art-grid">
+        <!-- 📦 SECTION 3: CUTE GALLERY GRID -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5" id="cute-grid">
             <!-- Render ผ่าน JS -->
         </div>
 
 
-        <!-- 📞 SECTION 4: FOOTER CONTACT BLOCK -->
-        <footer id="contact" class="brutal-card p-8 bg-[#111111] text-white border-3 border-black space-y-6">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b-2 border-gray-800 pb-4">
+        <!-- 💌 SECTION 4: FOOTER CONTACT -->
+        <footer id="contact" class="cute-card p-8 bg-gradient-to-br from-sky-500 to-sky-600 text-white space-y-6 relative overflow-hidden border-none shadow-xl shadow-sky-200">
+            <span class="absolute -bottom-6 -right-6 text-8xl opacity-10 pointer-events-none">☁️</span>
+
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-sky-300/50 pb-5">
                 <div>
-                    <h3 class="text-2xl font-black text-[#CCFF00] uppercase">GET IN TOUCH</h3>
-                    <p class="text-xs text-gray-400">ช่องทางการติดต่อสำหรับกรรมการและอาจารย์</p>
+                    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+                        <span>📬</span> CONTACT ME
+                    </h3>
+                    <p class="text-xs text-sky-100">ช่องทางการติดต่อสำหรับอาจารย์และกรรมการค่ะ/ครับ</p>
                 </div>
-                <span class="brutal-tag text-black text-xs px-3 py-1 uppercase">
-                    AVAILABLE FOR ADMISSION
+                <span class="text-xs bg-white/20 backdrop-blur-md text-white px-3 py-1 rounded-full font-medium border border-white/30">
+                    Portfolio Candidate
                 </span>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-bold">
-                <div class="p-4 bg-gray-900 border-2 border-gray-700">
-                    <p class="text-[#CCFF00] text-[10px] uppercase mb-1">PHONE</p>
-                    <p class="text-white text-sm">[กรอกเบอร์โทรศัพท์]</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-medium">
+                <div class="p-3.5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                    <p class="text-sky-200 text-[10px] mb-0.5">📞 เบอร์โทรศัพท์</p>
+                    <p class="text-white font-semibold">[กรอกเบอร์โทรศัพท์]</p>
                 </div>
-                <div class="p-4 bg-gray-900 border-2 border-gray-700">
-                    <p class="text-[#CCFF00] text-[10px] uppercase mb-1">EMAIL</p>
-                    <p class="text-white text-sm truncate">[กรอกอีเมล]</p>
+                <div class="p-3.5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                    <p class="text-sky-200 text-[10px] mb-0.5">อีเมล</p>
+                    <p class="text-white font-semibold truncate">[กรอกอีเมล]</p>
                 </div>
-                <div class="p-4 bg-gray-900 border-2 border-gray-700">
-                    <p class="text-[#CCFF00] text-[10px] uppercase mb-1">SOCIAL / IG</p>
-                    <p class="text-white text-sm truncate">[กรอก Instagram / Line]</p>
+                <div class="p-3.5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                    <p class="text-sky-200 text-[10px] mb-0.5">📲 Social / Line</p>
+                    <p class="text-white font-semibold truncate">[กรอก Instagram / Line]</p>
                 </div>
             </div>
 
-            <p class="text-[10px] text-gray-500 text-center uppercase tracking-widest pt-2">
-                © CANDIDATE PORTFOLIO. ALL RIGHTS RESERVED.
+            <p class="text-[10px] text-sky-200 text-center pt-2">
+                © Candidate Portfolio. Prepared for University Admission. ✨
             </p>
         </footer>
 
     </div>
 
-    <!-- 🛑 LIGHTBOX MODAL -->
-    <div id="art-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm" onclick="closeModal()">
-        <button class="absolute top-6 right-6 brutal-btn text-black w-12 h-12 text-xl flex items-center justify-center font-black" onclick="closeModal()">✕</button>
+    <!-- 🛑 LIGHTBOX MODAL (ป๊อปอัปดูรูปเต็ม) -->
+    <div id="art-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-sky-950/60 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeModal()">
+        <button class="absolute top-6 right-6 bg-white text-sky-600 hover:bg-sky-100 w-11 h-11 rounded-full text-lg shadow-lg flex items-center justify-center font-bold" onclick="closeModal()">✕</button>
         
-        <div class="bg-white text-black p-4 max-w-md w-full border-4 border-black shadow-[10px_10px_0px_0px_#CCFF00] flex flex-col items-center" onclick="event.stopPropagation()">
-            <div class="w-full aspect-a4 overflow-hidden bg-gray-200 border-2 border-black flex items-center justify-center">
+        <div class="bg-white rounded-3xl p-4 max-w-md w-full shadow-2xl border-4 border-sky-100 flex flex-col items-center" onclick="event.stopPropagation()">
+            <div class="w-full aspect-a4 overflow-hidden rounded-2xl bg-sky-50 flex items-center justify-center border border-sky-100">
                 <img id="modal-img" src="" alt="Zoom Image" class="w-full h-full object-contain">
             </div>
             <div class="p-3 text-center w-full">
-                <h3 id="modal-title" class="text-base font-black uppercase text-black"></h3>
-                <p id="modal-desc" class="text-xs font-bold text-gray-600 mt-1"></p>
+                <h3 id="modal-title" class="text-sm font-semibold text-sky-900"></h3>
+                <p id="modal-desc" class="text-xs text-slate-500 mt-1"></p>
             </div>
         </div>
     </div>
 
     <!-- 🛠️ JAVASCRIPT -->
     <script>
-        // 📌 แก้ไขไฟล์รูปภาพ (img) และชื่อผลงาน (title) ตรงนี้ได้เลยครับ
+        // 📌 แก้ไขลิงก์รูปภาพ (img) และ ชื่อผลงาน (title) ได้ตรงนี้เลยครับ
         const artworks = [
-            { img: "path/to/image1.jpg", title: "01 | STATEMENT OF PURPOSE", desc: "[ใส่คำอธิบายผลงาน]" },
-            { img: "path/to/image2.jpg", title: "WORK NO. 02", desc: "" },
-            { img: "path/to/image3.jpg", title: "WORK NO. 03", desc: "" },
-            { img: "path/to/image4.jpg", title: "WORK NO. 04", desc: "" },
-            { img: "path/to/image5.jpg", title: "WORK NO. 05", desc: "" },
-            { img: "path/to/image6.jpg", title: "WORK NO. 06", desc: "" },
-            { img: "path/to/image7.jpg", title: "WORK NO. 07", desc: "" },
-            { img: "path/to/image8.jpg", title: "WORK NO. 08", desc: "" },
-            { img: "path/to/image9.jpg", title: "WORK NO. 09", desc: "" },
-            { img: "path/to/image10.jpg", title: "WORK NO. 10", desc: "" }
+            { img: "path/to/image1.jpg", title: "01 | Statement of Purpose", desc: "[ใส่คำอธิบายผลงาน]" },
+            { img: "path/to/image2.jpg", title: "ผลงานชิ้นที่ 02", desc: "" },
+            { img: "path/to/image3.jpg", title: "ผลงานชิ้นที่ 03", desc: "" },
+            { img: "path/to/image4.jpg", title: "ผลงานชิ้นที่ 04", desc: "" },
+            { img: "path/to/image5.jpg", title: "ผลงานชิ้นที่ 05", desc: "" },
+            { img: "path/to/image6.jpg", title: "ผลงานชิ้นที่ 06", desc: "" },
+            { img: "path/to/image7.jpg", title: "ผลงานชิ้นที่ 07", desc: "" },
+            { img: "path/to/image8.jpg", title: "ผลงานชิ้นที่ 08", desc: "" },
+            { img: "path/to/image9.jpg", title: "ผลงานชิ้นที่ 09", desc: "" },
+            { img: "path/to/image10.jpg", title: "ผลงานชิ้นที่ 10", desc: "" }
         ];
 
         function renderGallery() {
-            const grid = document.getElementById('art-grid');
+            const grid = document.getElementById('cute-grid');
             let html = '';
 
             artworks.forEach((data, index) => {
                 const displayNum = (index + 1).toString().padStart(2, '0');
 
                 html += `
-                    <div class="brutal-card p-3 cursor-pointer flex flex-col justify-between" onclick="openModal('${data.img}', '${data.title}', '${data.desc}')">
+                    <div class="cute-card p-3 cursor-pointer flex flex-col justify-between" onclick="openModal('${data.img}', '${data.title}', '${data.desc}')">
                         <div>
-                            <!-- Header การ์ด -->
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-[10px] font-black bg-black text-white px-2 py-0.5">#${displayNum}</span>
-                                <span class="text-[10px] font-extrabold text-black uppercase">A4 FORMAT</span>
+                            <div class="flex justify-between items-center mb-2 px-1">
+                                <span class="text-[10px] font-semibold text-sky-600 bg-sky-100 px-2.5 py-0.5 rounded-full">NO. ${displayNum}</span>
+                                <span class="text-[10px] text-sky-400 font-medium">A4</span>
                             </div>
                             
-                            <!-- กรอบรูป A4 -->
-                            <div class="w-full aspect-a4 bg-[#F3F0E6] border-2 border-black overflow-hidden flex flex-col items-center justify-center p-2 relative text-center mb-2.5">
+                            <div class="w-full aspect-a4 bg-sky-50/80 rounded-2xl overflow-hidden border border-sky-100 flex flex-col items-center justify-center p-2 relative text-center mb-2">
                                 <img src="${data.img}" alt="${data.title}" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
-                                <span class="text-3xl mb-1">📄</span>
-                                <p class="font-extrabold text-xs text-black uppercase">ชิ้นที่ ${displayNum}</p>
-                                <p class="text-gray-500 text-[10px] font-bold">[ ใส่รูปผลงาน ]</p>
+                                <span class="text-2xl mb-1 text-sky-400">📄</span>
+                                <p class="text-sky-900 font-medium text-xs">ชิ้นที่ ${displayNum}</p>
+                                <p class="text-sky-400 text-[10px]">[ ใส่รูปผลงาน ]</p>
                             </div>
 
-                            <h3 class="font-black text-black text-xs leading-snug truncate uppercase">${data.title}</h3>
+                            <h3 class="font-medium text-slate-800 text-xs truncate px-1">${data.title}</h3>
                         </div>
                         
-                        <div class="pt-2 mt-2 border-t-2 border-black flex justify-between items-center bg-[#CCFF00] -mx-3 -mb-3 p-2 border-b-0">
-                            <span class="text-[10px] font-extrabold text-black uppercase">CLICK TO VIEW</span>
-                            <span class="font-black text-xs">➔</span>
+                        <div class="pt-2 mt-2 border-t border-sky-50 flex justify-between items-center px-1">
+                            <span class="text-[10px] text-sky-500 font-medium">ขยายดูภาพ</span>
+                            <span class="text-sky-400 text-xs">🔍</span>
                         </div>
                     </div>
                 `;
@@ -257,11 +261,17 @@
             modalDesc.innerText = desc;
             
             modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.add('opacity-100');
+            }, 10);
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
-            modal.classList.add('hidden');
+            modal.classList.remove('opacity-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
             document.body.style.overflow = '';
         }
 
