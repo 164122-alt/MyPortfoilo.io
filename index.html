@@ -6,7 +6,7 @@
     <title>[ชื่อ-นามสกุล] // PORTFOLIO ☁️</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font (Mitr - ฟอนต์โค้งมนน่ารัก) -->
+    <!-- Google Font (Mitr) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -14,185 +14,195 @@
     <style>
         body { 
             font-family: 'Mitr', sans-serif; 
-            background-color: #F0F9FF; /* Sky 50 */
-            color: #1E293B;
+            background-color: #F0F9FF;
+            color: #0F172A;
         }
 
-        /* 📐 สัดส่วนกระดาษ A4 แนวตั้ง */
         .aspect-a4 {
             aspect-ratio: 210 / 297;
         }
 
-        /* ☁️ Cute Soft Cards */
-        .cute-card {
+        /* ☁️ Soft Dashboard Cards */
+        .dash-card {
             background: #FFFFFF;
             border: 2px solid #E0F2FE;
-            border-radius: 28px;
-            box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.12);
+            border-radius: 24px;
+            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.08);
             transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-        .cute-card:hover {
-            transform: translateY(-6px) scale(1.01);
+        .dash-card:hover {
             border-color: #38BDF8;
-            box-shadow: 0 20px 30px -5px rgba(56, 189, 248, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px -5px rgba(14, 165, 233, 0.18);
         }
 
-        /* เอฟเฟกต์ปุ่มมนนุ่ม */
-        .cute-btn {
-            background-color: #38BDF8;
-            color: white;
-            border-radius: 9999px;
-            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35);
-            transition: all 0.2s ease;
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .cute-btn:hover {
-            background-color: #0284C7;
-            transform: scale(1.05);
+        ::-webkit-scrollbar-track {
+            background: #F0F9FF;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #BAE6FD;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #38BDF8;
         }
     </style>
 </head>
-<body class="antialiased selection:bg-sky-200 selection:text-sky-900">
+<body class="antialiased selection:bg-sky-200 selection:text-sky-900 min-h-screen">
 
-    <!-- ☁️ TOP NAVBAR -->
-    <header class="w-full py-3.5 px-4 sticky top-3 z-40">
-        <div class="max-w-6xl mx-auto bg-white/80 backdrop-blur-md border-2 border-sky-100 rounded-full px-5 py-2 flex justify-between items-center shadow-lg shadow-sky-100/50">
-            <div class="flex items-center gap-2">
-                <span class="text-xl">☁️</span>
-                <span class="text-xs font-semibold tracking-wider text-sky-600 uppercase">PORTFOLIO // [ปีการศึกษา]</span>
-            </div>
-            <a href="#contact" class="cute-btn text-xs font-medium px-4 py-1.5 flex items-center gap-1">
-                <span>💌</span> ติดต่อ
-            </a>
-        </div>
-    </header>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 lg:py-10">
+        
+        <!-- 📐 MAIN SPLIT LAYOUT (แบ่งซ้าย-ขวา) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-10">
-
-        <!-- 🎀 SECTION 1: HERO CONTAINER (การ์ดโปรไฟล์น่ารัก) -->
-        <section class="cute-card p-6 sm:p-10 bg-gradient-to-br from-white via-sky-50/50 to-cyan-50 relative overflow-hidden">
-            <!-- อิโมจิตกแต่งพื้นหลัง -->
-            <span class="absolute top-4 right-8 text-4xl opacity-20 pointer-events-none animate-bounce">✨</span>
-            <span class="absolute bottom-4 left-6 text-3xl opacity-20 pointer-events-none">🧸</span>
-
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+            <!-- 📌 ฝั่งซ้าย: STICKY SIDEBAR (โปรไฟล์ + ติดต่อ ในที่เดียว) -->
+            <aside class="lg:col-span-4 lg:sticky lg:top-8 space-y-5">
                 
-                <!-- รูปโปรไฟล์ -->
-                <div class="md:col-span-4 lg:col-span-3">
-                    <div class="w-full aspect-a4 rounded-3xl overflow-hidden bg-sky-100 border-4 border-white shadow-md relative flex flex-col items-center justify-center p-3 text-center group">
-                        <!-- 📌 ใส่ลิงก์รูปโปรไฟล์ที่ src -->
-                        <img src="path/to/profile.jpg" alt="Profile" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
-                        <div class="w-14 h-14 bg-sky-200 text-sky-600 rounded-full flex items-center justify-center mb-2 text-2xl">💙</div>
-                        <p class="text-sky-700 font-medium text-xs">[ ใส่รูปโปรไฟล์ ]</p>
+                <!-- การ์ดโปรไฟล์หลัก -->
+                <div class="dash-card p-6 bg-gradient-to-b from-white via-sky-50/40 to-cyan-50 relative overflow-hidden">
+                    <span class="absolute top-3 right-4 text-xs font-semibold bg-sky-100 text-sky-700 px-3 py-1 rounded-full border border-sky-200">
+                        Candidate 2026
+                    </span>
+
+                    <div class="flex flex-col items-center text-center mt-3 space-y-3">
+                        <!-- รูปโปรไฟล์แบบวงกลมนุ่มฟู -->
+                        <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1.5 bg-gradient-to-tr from-sky-400 to-cyan-200 shadow-md relative">
+                            <div class="w-full h-full rounded-full overflow-hidden bg-sky-100 border-2 border-white relative flex items-center justify-center">
+                                <img src="path/to/profile.jpg" alt="Profile" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                <span class="text-3xl text-sky-400">👤</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h1 class="text-xl font-semibold text-slate-800 tracking-tight">
+                                [ชื่อ-นามสกุล ภาษาอังกฤษ]
+                            </h1>
+                            <p class="text-xs font-medium text-sky-600 mt-0.5">
+                                [นาย/นางสาว ชื่อ-นามสกุล ภาษาไทย] ([ชื่อเล่น])
+                            </p>
+                        </div>
+
+                        <!-- ข้อความแนะนำตัว -->
+                        <p class="text-xs text-slate-600 bg-white/80 p-3 rounded-2xl border border-sky-100 leading-relaxed text-left">
+                            💬 [ใส่ข้อความแนะนำตัวสั้นๆ เช่น: มุ่งมั่นศึกษาและสร้างสรรค์ผลงาน รวบรวมผลงานและกิจกรรมทั้งหมดไว้ในพอร์ตโฟลิโอนี้ครับ/ค่ะ]
+                        </p>
+
+                        <!-- ตารางข้อมูลย่อ -->
+                        <div class="w-full grid grid-cols-2 gap-2 text-left text-xs pt-1">
+                            <div class="p-2.5 bg-white rounded-xl border border-sky-100">
+                                <span class="text-[10px] text-sky-400 block font-medium">🏫 โรงเรียน</span>
+                                <span class="font-semibold text-slate-700 text-[11px] truncate block">[ชื่อโรงเรียน]</span>
+                            </div>
+                            <div class="p-2.5 bg-white rounded-xl border border-sky-100">
+                                <span class="text-[10px] text-sky-400 block font-medium">📚 สายการเรียน</span>
+                                <span class="font-semibold text-slate-700 text-[11px] truncate block">[แผนการเรียน]</span>
+                            </div>
+                            <div class="col-span-2 p-2.5 bg-sky-50 rounded-xl border border-sky-200 flex justify-between items-center">
+                                <span class="text-[10px] text-sky-600 font-medium">⭐ เกรดเฉลี่ยสะสม (GPAX)</span>
+                                <span class="font-bold text-sky-700 text-xs">[กรอกเกรดเฉลี่ย]</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- ข้อความโปรไฟล์ -->
-                <div class="md:col-span-8 lg:col-span-9 space-y-4">
-                    <div class="space-y-1">
-                        <span class="inline-block text-xs font-medium text-sky-700 bg-sky-100 px-3 py-1 rounded-full border border-sky-200">
-                            ✨ Candidate Admission [ปีการศึกษา]
+                <!-- การ์ดติดต่อ (Contact Widget อยู่ใน Sidebar เลย) -->
+                <div class="dash-card p-5 bg-sky-600 text-white space-y-3 relative overflow-hidden">
+                    <span class="absolute -bottom-4 -right-4 text-6xl opacity-10 pointer-events-none">☁️</span>
+                    
+                    <div class="flex items-center gap-2 border-b border-sky-400/60 pb-2">
+                        <span class="text-base">💌</span>
+                        <h3 class="text-xs font-semibold tracking-wider uppercase text-sky-100">CONTACT CHANNELS</h3>
+                    </div>
+
+                    <div class="space-y-2 text-xs font-medium">
+                        <div class="flex items-center justify-between bg-white/10 p-2 rounded-lg backdrop-blur-sm">
+                            <span class="text-sky-200 text-[10px]">📞 Phone</span>
+                            <span class="text-white text-[11px]">[กรอกเบอร์โทร]</span>
+                        </div>
+                        <div class="flex items-center justify-between bg-white/10 p-2 rounded-lg backdrop-blur-sm">
+                            <span class="text-sky-200 text-[10px]">✉️ Email</span>
+                            <span class="text-white text-[11px] truncate max-w-[150px]">[กรอกอีเมล]</span>
+                        </div>
+                        <div class="flex items-center justify-between bg-white/10 p-2 rounded-lg backdrop-blur-sm">
+                            <span class="text-sky-200 text-[10px]">📲 IG / Line</span>
+                            <span class="text-white text-[11px]">[กรอก Social]</span>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+
+            <!-- 🖼️ ฝั่งขวา: MAIN PORTFOLIO FEED (เนื้อหาผลงานหลัก) -->
+            <main class="lg:col-span-8 space-y-6">
+                
+                <!-- Header Banner เล็กๆ สไตล์ App -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-white p-4 rounded-2xl border-2 border-sky-100 shadow-sm">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-sky-400 animate-pulse"></span>
+                        <h2 class="text-base font-semibold text-slate-800">PORTFOLIO ARCHIVE</h2>
+                    </div>
+                    <span class="text-xs text-sky-600 bg-sky-50 px-3 py-1 rounded-full font-medium border border-sky-200">
+                        📄 ทั้งหมด 10 ผลงาน (คลิกรูปเพื่อซูม A4)
+                    </span>
+                </div>
+
+                <!-- 🌟 FEATURED ITEM (ผลงานชิ้นที่ 1 เด่นพิเศษ) -->
+                <div class="dash-card p-5 bg-gradient-to-br from-white to-sky-50/60 cursor-pointer" onclick="openModal(artworks[0].img, artworks[0].title, artworks[0].desc)">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-semibold text-white bg-sky-500 px-3 py-0.5 rounded-full shadow-sm">
+                            ⭐ HIGHLIGHT WORK #01
                         </span>
-                        <h1 class="text-2xl sm:text-4xl font-semibold text-sky-950 tracking-tight pt-1">
-                            [ชื่อ - นามสกุล ภาษาอังกฤษ]
-                        </h1>
-                        <p class="text-sm font-medium text-sky-600">[นาย/นางสาว/ชื่อ-นามสกุล ภาษาไทย] ([ชื่อเล่น])</p>
+                        <span class="text-xs text-sky-400 font-medium">A4 SIZE</span>
                     </div>
 
-                    <!-- ข้อความแนะนำตัว -->
-                    <div class="bg-white/80 p-4 rounded-2xl border border-sky-100 text-xs sm:text-sm text-slate-600 leading-relaxed shadow-sm">
-                        🌸 [ใส่ข้อความแนะนำตัวสั้นๆ เช่น: สวัสดีค่ะ/ครับ หนู/ผมมุ่งมั่นที่จะเรียนรู้และตั้งใจสร้างสรรค์ผลงานอย่างเต็มที่ รวบรวมผลงานทั้งหมดไว้ในพอร์ตโฟลิโอนี้ค่ะ/ครับ]
-                    </div>
-
-                    <!-- การ์ดสรุปข้อมูล 3 กล่อง -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 text-xs">
-                        <div class="p-3 bg-white rounded-2xl border border-sky-100 text-center shadow-sm">
-                            <span class="text-sky-400 font-medium block text-[10px]">🏫 โรงเรียน</span>
-                            <span class="font-semibold text-slate-700 truncate block">[กรอกชื่อโรงเรียน]</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
+                        <div class="sm:col-span-5">
+                            <div class="w-full aspect-a4 bg-sky-100 rounded-xl overflow-hidden border border-sky-200 relative flex flex-col items-center justify-center p-2 text-center">
+                                <img src="path/to/image1.jpg" alt="Highlight Work" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
+                                <span class="text-3xl text-sky-400 mb-1">📄</span>
+                                <span class="text-xs text-sky-700 font-medium">[ รูปผลงาน Highlight ]</span>
+                            </div>
                         </div>
-                        <div class="p-3 bg-white rounded-2xl border border-sky-100 text-center shadow-sm">
-                            <span class="text-sky-400 font-medium block text-[10px]">📚 แผนการเรียน</span>
-                            <span class="font-semibold text-slate-700 truncate block">[กรอกแผนการเรียน]</span>
-                        </div>
-                        <div class="p-3 bg-sky-100 rounded-2xl border border-sky-200 text-center shadow-sm">
-                            <span class="text-sky-600 font-medium block text-[10px]">⭐ เกรดเฉลี่ย (GPAX)</span>
-                            <span class="font-bold text-sky-700 text-sm truncate block">[กรอกเกรดเฉลี่ย]</span>
+                        <div class="sm:col-span-7 space-y-2">
+                            <h3 class="text-base font-semibold text-slate-800">01 | STATEMENT OF PURPOSE</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">
+                                [ใส่คำอธิบายสั้นๆ ของผลงานชิ้นนี้ เช่น: จดหมายแสดงเจตจำนงและความตั้งใจในการเข้าศึกษาต่อ...]
+                            </p>
+                            <div class="pt-2">
+                                <span class="inline-flex items-center gap-1 text-xs text-sky-600 font-medium bg-white px-3 py-1 rounded-full border border-sky-200 shadow-sm">
+                                    <span>🔍 คลิกเพื่อขยายอ่านขนาดเต็ม</span>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-            </div>
-        </section>
-
-
-        <!-- 🎨 SECTION 2: GALLERY TITLE -->
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2 px-2">
-            <div class="flex items-center gap-2">
-                <span class="text-2xl">🖼️</span>
-                <div>
-                    <span class="text-xs font-semibold text-sky-500 uppercase tracking-wider">My Gallery</span>
-                    <h2 class="text-xl sm:text-2xl font-semibold text-sky-950">ผลงานทั้งหมด</h2>
+                <!-- 📦 GRID WORKS (ผลงานชิ้นที่ 2-10 แบบ 2 คอลัมน์) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5" id="feed-grid">
+                    <!-- Render ผ่าน JS -->
                 </div>
-            </div>
-            <span class="text-xs text-sky-600 bg-sky-100 px-3 py-1 rounded-full font-medium">
-                💡 คลิกที่ภาพเพื่อดูขนาดเต็ม A4
-            </span>
+
+            </main>
+
         </div>
-
-
-        <!-- 📦 SECTION 3: CUTE GALLERY GRID -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5" id="cute-grid">
-            <!-- Render ผ่าน JS -->
-        </div>
-
-
-        <!-- 💌 SECTION 4: FOOTER CONTACT -->
-        <footer id="contact" class="cute-card p-8 bg-gradient-to-br from-sky-500 to-sky-600 text-white space-y-6 relative overflow-hidden border-none shadow-xl shadow-sky-200">
-            <span class="absolute -bottom-6 -right-6 text-8xl opacity-10 pointer-events-none">☁️</span>
-
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-sky-300/50 pb-5">
-                <div>
-                    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
-                        <span>📬</span> CONTACT ME
-                    </h3>
-                    <p class="text-xs text-sky-100">ช่องทางการติดต่อสำหรับอาจารย์และกรรมการค่ะ/ครับ</p>
-                </div>
-                <span class="text-xs bg-white/20 backdrop-blur-md text-white px-3 py-1 rounded-full font-medium border border-white/30">
-                    Portfolio Candidate
-                </span>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-medium">
-                <div class="p-3.5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-                    <p class="text-sky-200 text-[10px] mb-0.5">📞 เบอร์โทรศัพท์</p>
-                    <p class="text-white font-semibold">[กรอกเบอร์โทรศัพท์]</p>
-                </div>
-                <div class="p-3.5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-                    <p class="text-sky-200 text-[10px] mb-0.5">อีเมล</p>
-                    <p class="text-white font-semibold truncate">[กรอกอีเมล]</p>
-                </div>
-                <div class="p-3.5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-                    <p class="text-sky-200 text-[10px] mb-0.5">📲 Social / Line</p>
-                    <p class="text-white font-semibold truncate">[กรอก Instagram / Line]</p>
-                </div>
-            </div>
-
-            <p class="text-[10px] text-sky-200 text-center pt-2">
-                © Candidate Portfolio. Prepared for University Admission. ✨
-            </p>
-        </footer>
 
     </div>
 
     <!-- 🛑 LIGHTBOX MODAL (ป๊อปอัปดูรูปเต็ม) -->
-    <div id="art-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-sky-950/60 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeModal()">
-        <button class="absolute top-6 right-6 bg-white text-sky-600 hover:bg-sky-100 w-11 h-11 rounded-full text-lg shadow-lg flex items-center justify-center font-bold" onclick="closeModal()">✕</button>
+    <div id="art-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeModal()">
+        <button class="absolute top-6 right-6 bg-white text-sky-600 hover:bg-sky-50 w-10 h-10 rounded-full text-base shadow-lg flex items-center justify-center font-bold" onclick="closeModal()">✕</button>
         
-        <div class="bg-white rounded-3xl p-4 max-w-md w-full shadow-2xl border-4 border-sky-100 flex flex-col items-center" onclick="event.stopPropagation()">
+        <div class="bg-white rounded-3xl p-4 max-w-md w-full shadow-2xl border-2 border-sky-100 flex flex-col items-center" onclick="event.stopPropagation()">
             <div class="w-full aspect-a4 overflow-hidden rounded-2xl bg-sky-50 flex items-center justify-center border border-sky-100">
                 <img id="modal-img" src="" alt="Zoom Image" class="w-full h-full object-contain">
             </div>
             <div class="p-3 text-center w-full">
-                <h3 id="modal-title" class="text-sm font-semibold text-sky-900"></h3>
+                <h3 id="modal-title" class="text-sm font-semibold text-slate-800"></h3>
                 <p id="modal-desc" class="text-xs text-slate-500 mt-1"></p>
             </div>
         </div>
@@ -200,9 +210,9 @@
 
     <!-- 🛠️ JAVASCRIPT -->
     <script>
-        // 📌 แก้ไขลิงก์รูปภาพ (img) และ ชื่อผลงาน (title) ได้ตรงนี้เลยครับ
+        // 📌 แก้ไขไฟล์รูปภาพ (img) และ ชื่อผลงาน (title) ได้ที่นี่
         const artworks = [
-            { img: "path/to/image1.jpg", title: "01 | Statement of Purpose", desc: "[ใส่คำอธิบายผลงาน]" },
+            { img: "path/to/image1.jpg", title: "01 | STATEMENT OF PURPOSE", desc: "[คำอธิบายผลงานชิ้นที่ 1]" },
             { img: "path/to/image2.jpg", title: "ผลงานชิ้นที่ 02", desc: "" },
             { img: "path/to/image3.jpg", title: "ผลงานชิ้นที่ 03", desc: "" },
             { img: "path/to/image4.jpg", title: "ผลงานชิ้นที่ 04", desc: "" },
@@ -215,21 +225,23 @@
         ];
 
         function renderGallery() {
-            const grid = document.getElementById('cute-grid');
+            const grid = document.getElementById('feed-grid');
             let html = '';
 
-            artworks.forEach((data, index) => {
-                const displayNum = (index + 1).toString().padStart(2, '0');
+            // แสดงเฉพาะชิ้นที่ 2 เป็นต้นไป ( index 1 ถึง 9 ) เพราะชิ้นแรกอยู่ตรง Highlight ด้านบนแล้ว
+            artworks.slice(1).forEach((data, idx) => {
+                const actualIndex = idx + 2;
+                const displayNum = actualIndex.toString().padStart(2, '0');
 
                 html += `
-                    <div class="cute-card p-3 cursor-pointer flex flex-col justify-between" onclick="openModal('${data.img}', '${data.title}', '${data.desc}')">
+                    <div class="dash-card p-3.5 cursor-pointer flex flex-col justify-between" onclick="openModal('${data.img}', '${data.title}', '${data.desc}')">
                         <div>
                             <div class="flex justify-between items-center mb-2 px-1">
                                 <span class="text-[10px] font-semibold text-sky-600 bg-sky-100 px-2.5 py-0.5 rounded-full">NO. ${displayNum}</span>
                                 <span class="text-[10px] text-sky-400 font-medium">A4</span>
                             </div>
                             
-                            <div class="w-full aspect-a4 bg-sky-50/80 rounded-2xl overflow-hidden border border-sky-100 flex flex-col items-center justify-center p-2 relative text-center mb-2">
+                            <div class="w-full aspect-a4 bg-sky-50 rounded-2xl overflow-hidden border border-sky-100 flex flex-col items-center justify-center p-2 relative text-center mb-2.5">
                                 <img src="${data.img}" alt="${data.title}" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
                                 <span class="text-2xl mb-1 text-sky-400">📄</span>
                                 <p class="text-sky-900 font-medium text-xs">ชิ้นที่ ${displayNum}</p>
@@ -240,7 +252,7 @@
                         </div>
                         
                         <div class="pt-2 mt-2 border-t border-sky-50 flex justify-between items-center px-1">
-                            <span class="text-[10px] text-sky-500 font-medium">ขยายดูภาพ</span>
+                            <span class="text-[10px] text-sky-500 font-medium">ดูขนาดเต็ม</span>
                             <span class="text-sky-400 text-xs">🔍</span>
                         </div>
                     </div>
