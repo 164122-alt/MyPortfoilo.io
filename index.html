@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[ชื่อภาษาอังกฤษ] // PORTFOLIO</title>
+    <title>[ชื่อ-นามสกุล] // PORTFOLIO ARCHIVE</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font (Prompt) -->
+    <!-- Google Font (Kanit) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --bg-sky: #F0F9FF;
-            --blue-accent: #0284C7;
-        }
         body { 
-            font-family: 'Prompt', sans-serif; 
-            background-color: var(--bg-sky);
+            font-family: 'Kanit', sans-serif; 
+            background-color: #F3F0E6;
+            color: #111111;
         }
 
         /* 📐 สัดส่วนกระดาษ A4 แนวตั้ง */
@@ -26,83 +23,102 @@
             aspect-ratio: 210 / 297;
         }
 
-        /* การ์ดสไตล์ Ice-Glass */
-        .ice-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            border: 1px solid #BAE6FD;
-            border-radius: 20px;
-            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        /* ⚡ Neo-Brutalist Styling */
+        .brutal-card {
+            background-color: #FFFFFF;
+            border: 3px solid #111111;
+            box-shadow: 6px 6px 0px #111111;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .ice-card:hover {
-            border-color: #38BDF8;
-            box-shadow: 0 20px 35px -10px rgba(14, 165, 233, 0.25);
-            transform: translateY(-6px);
+        .brutal-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 10px 10px 0px #111111;
+        }
+
+        .brutal-tag {
+            background-color: #CCFF00;
+            border: 2px solid #111111;
+            font-weight: 800;
+        }
+
+        .brutal-btn {
+            background-color: #CCFF00;
+            border: 3px solid #111111;
+            box-shadow: 4px 4px 0px #111111;
+            font-weight: 800;
+            transition: all 0.15s ease;
+        }
+        .brutal-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #111111;
+            background-color: #b8e600;
         }
     </style>
 </head>
-<body class="antialiased text-slate-800 selection:bg-sky-500 selection:text-white">
+<body class="antialiased selection:bg-black selection:text-[#CCFF00]">
 
-    <!-- 🌊 TOP NAVBAR -->
-    <header class="w-full py-4 bg-sky-900/90 backdrop-blur-md text-white sticky top-0 z-40 border-b border-sky-700/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
-                <span class="text-xs font-black tracking-widest text-sky-200 uppercase">PORTFOLIO // [ปี พ.ศ./ค.ศ.]</span>
+    <!-- 💥 TOP MARQUEE BANNER -->
+    <div class="bg-[#111111] text-[#CCFF00] py-2 px-4 border-b-4 border-black font-black text-xs tracking-widest overflow-hidden whitespace-nowrap flex justify-between items-center">
+        <span>● PORTFOLIO ARCHIVE // ADMISSION 2026 ●</span>
+        <span class="hidden sm:inline">CONFIDENTIAL DOCUMENT / FOR EXAMINATION ONLY</span>
+        <a href="#contact" class="bg-[#CCFF00] text-black px-3 py-0.5 text-[11px] font-extrabold border border-black uppercase hover:bg-white transition">
+            CONTACT
+        </a>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-12">
+
+        <!-- ⚡ SECTION 1: HERO ID CARD -->
+        <section class="brutal-card p-6 sm:p-8 relative bg-white">
+            <!-- Badge ตกแต่งมุม -->
+            <div class="absolute -top-4 -right-2 brutal-tag px-4 py-1 text-xs text-black uppercase transform rotate-2">
+                OFFICIAL APPLICANT
             </div>
-            <a href="#contact" class="text-xs font-bold bg-sky-500 hover:bg-sky-400 text-white px-4 py-1.5 rounded-full transition shadow-md shadow-sky-900/40">
-                Contact Me
-            </a>
-        </div>
-    </header>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-12">
-
-        <!-- ❄️ SECTION 1: HERO CONTAINER -->
-        <section class="ice-card p-6 sm:p-10 bg-gradient-to-br from-white via-sky-50 to-cyan-100/60 shadow-xl relative overflow-hidden">
-            <div class="absolute -top-16 -right-16 w-80 h-80 bg-sky-300/30 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 
-                <!-- รูปโปรไฟล์ A4 -->
+                <!-- รูปโปรไฟล์ -->
                 <div class="md:col-span-4 lg:col-span-3">
-                    <div class="w-full aspect-a4 rounded-2xl overflow-hidden bg-sky-200/50 border-2 border-sky-300 relative flex flex-col items-center justify-center p-4 text-center shadow-lg">
+                    <div class="w-full aspect-a4 bg-gray-100 border-3 border-black relative flex flex-col items-center justify-center p-2 shadow-[4px_4px_0px_0px_#111]">
                         <!-- 📌 ใส่ลิงก์รูปโปรไฟล์ที่ src -->
                         <img src="path/to/profile.jpg" alt="Profile" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
-                        <div class="w-12 h-12 bg-sky-500/20 text-sky-700 rounded-full flex items-center justify-center mb-2 text-xl font-bold">👤</div>
-                        <p class="text-sky-900 font-bold text-xs">[ใส่รูปโปรไฟล์]</p>
+                        <span class="text-4xl mb-2">📸</span>
+                        <p class="font-extrabold text-xs uppercase">[ รูปโปรไฟล์ ]</p>
                     </div>
                 </div>
 
-                <!-- ข้อความโปรไฟล์ -->
-                <div class="md:col-span-8 lg:col-span-9 space-y-5">
-                    <div class="space-y-1.5">
-                        <span class="text-[11px] font-black tracking-widest text-sky-800 bg-sky-200/80 px-3.5 py-1 rounded-full border border-sky-300 uppercase">
-                            Candidate Admission [ปีการศึกษา]
+                <!-- รายละเอียดโปรไฟล์ -->
+                <div class="md:col-span-8 lg:col-span-9 space-y-4">
+                    <div>
+                        <span class="text-xs font-black bg-black text-white px-2.5 py-1 uppercase tracking-wider">
+                            CANDIDATE PROFILE
                         </span>
-                        <h1 class="text-3xl sm:text-5xl font-black text-sky-950 tracking-tight pt-2">
-                            [ชื่อ - นามสกุล ภาษาอังกฤษ]
+                        <h1 class="text-3xl sm:text-5xl font-black text-black tracking-tight uppercase pt-3 leading-none">
+                            [ชื่อ-นามสกุล ภาษาอังกฤษ]
                         </h1>
-                        <p class="text-sm font-bold text-sky-700">[นาย/นางสาว/ชื่อ-นามสกุล ภาษาไทย] ([ชื่อเล่น])</p>
+                        <p class="text-base font-bold text-gray-700 pt-1">
+                            [นาย/นางสาว ชื่อ-นามสกุล ภาษาไทย] ([ชื่อเล่น])
+                        </p>
                     </div>
 
-                    <p class="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed max-w-2xl border-l-4 border-sky-400 pl-4 bg-sky-50/50 py-2 rounded-r-lg">
-                        [ใส่ข้อความแนะนำตัวสั้นๆ หรือ Statement of Purpose เช่น: สวัสดีค่ะ/ครับ หนู/ผมมุ่งมั่นถ่ายทอดความคิดสร้างสรรค์ผ่านผลงานดีไซน์ มุ่งสู่การเรียนรู้สิ่งใหม่ๆ ในระดับอุดมศึกษา รวบรวมผลงานและกิจกรรมทั้งหมดไว้ในพอร์ตโฟลิโอนี้ค่ะ/ครับ]
-                    </p>
+                    <!-- แถบคำโปรย -->
+                    <div class="bg-[#F3F0E6] p-4 border-2 border-black text-xs sm:text-sm font-medium leading-relaxed">
+                        "[ใส่ข้อความ แนะนำตัว หรือ Statement of Purpose สั้นๆ เช่น: มุ่งมั่นตั้งใจถ่ายทอดความรู้และความคิดสร้างสรรค์ผ่านผลงานดีไซน์ รวบรวมไว้ในพอร์ตโฟลิโอเล่มนี้เพื่อการเข้าศึกษาต่อในระดับอุดมศึกษา]"
+                    </div>
 
-                    <!-- การ์ดข้อมูลสรุป 3 กล่อง -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
-                        <div class="p-3.5 bg-white/80 rounded-xl border border-sky-200 shadow-sm">
-                            <span class="text-sky-600 font-bold block text-[10px]">SCHOOL</span>
-                            <span class="font-bold text-slate-800">[กรอกชื่อโรงเรียน]</span>
+                    <!-- ตารางข้อมูลสเปก -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 text-xs">
+                        <div class="p-3 bg-[#CCFF00] border-2 border-black font-extrabold">
+                            <span class="text-[10px] block opacity-70">SCHOOL</span>
+                            <span class="text-sm truncate block">[ชื่อโรงเรียน]</span>
                         </div>
-                        <div class="p-3.5 bg-white/80 rounded-xl border border-sky-200 shadow-sm">
-                            <span class="text-sky-600 font-bold block text-[10px]">PROGRAM</span>
-                            <span class="font-bold text-slate-800">[กรอกแผนการเรียน]</span>
+                        <div class="p-3 bg-white border-2 border-black font-extrabold">
+                            <span class="text-[10px] block text-gray-500">PROGRAM</span>
+                            <span class="text-sm truncate block">[แผนการเรียน]</span>
                         </div>
-                        <div class="p-3.5 bg-white/80 rounded-xl border border-sky-200 shadow-sm">
-                            <span class="text-sky-600 font-bold block text-[10px]">GPAX</span>
-                            <span class="font-bold text-sky-600">[กรอกเกรดเฉลี่ย]</span>
+                        <div class="p-3 bg-black text-[#CCFF00] border-2 border-black font-extrabold">
+                            <span class="text-[10px] block opacity-70">GPAX</span>
+                            <span class="text-sm truncate block">[เกรดเฉลี่ย]</span>
                         </div>
                     </div>
                 </div>
@@ -111,113 +127,117 @@
         </section>
 
 
-        <!-- 📸 SECTION 2: GALLERY TITLE -->
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2 border-b-2 border-sky-200 pb-4">
-            <div>
-                <span class="text-xs font-extrabold text-sky-600 tracking-widest uppercase">Portfolio Works</span>
-                <h2 class="text-2xl sm:text-3xl font-black text-sky-950">ผลงานทั้งหมด</h2>
+        <!-- 🖼️ SECTION 2: GALLERY TITLE BAR -->
+        <div class="bg-black text-white p-4 border-3 border-black shadow-[5px_5px_0px_0px_#CCFF00] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+            <div class="flex items-center gap-3">
+                <span class="w-4 h-4 bg-[#CCFF00] border border-black inline-block"></span>
+                <h2 class="text-xl font-black tracking-wider uppercase">WORK SAMPLES // ผลงานทั้งหมด</h2>
             </div>
-            <p class="text-xs text-sky-700/80">คลิกที่การ์ดเพื่อขยายดูรูปขนาดเต็ม A4</p>
+            <span class="text-xs font-bold text-[#CCFF00] uppercase tracking-widest">[ CLICK CARD TO ZOOM A4 ]</span>
         </div>
 
 
-        <!-- 📦 SECTION 3: GRID แสดงผลงาน -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5" id="sky-grid">
+        <!-- 📦 SECTION 3: BRUTALIST GALLERY GRID -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="art-grid">
             <!-- Render ผ่าน JS -->
         </div>
 
 
-        <!-- 📞 SECTION 4: FOOTER CONTACT -->
-        <footer id="contact" class="rounded-3xl bg-gradient-to-br from-sky-950 via-slate-900 to-sky-900 text-white p-8 sm:p-10 border border-sky-800 shadow-2xl space-y-6">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-sky-800/80 pb-6">
+        <!-- 📞 SECTION 4: FOOTER CONTACT BLOCK -->
+        <footer id="contact" class="brutal-card p-8 bg-[#111111] text-white border-3 border-black space-y-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b-2 border-gray-800 pb-4">
                 <div>
-                    <h3 class="text-2xl font-black text-sky-300">CONTACT CHANNELS</h3>
-                    <p class="text-xs text-sky-300/70">ช่องทางการติดต่อสำหรับอาจารย์และกรรมการ</p>
+                    <h3 class="text-2xl font-black text-[#CCFF00] uppercase">GET IN TOUCH</h3>
+                    <p class="text-xs text-gray-400">ช่องทางการติดต่อสำหรับกรรมการและอาจารย์</p>
                 </div>
-                <span class="text-xs bg-sky-900 text-sky-200 border border-sky-700/60 px-4 py-1.5 rounded-full font-bold">
-                    Portfolio Candidate
+                <span class="brutal-tag text-black text-xs px-3 py-1 uppercase">
+                    AVAILABLE FOR ADMISSION
                 </span>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-semibold">
-                <div class="p-4 bg-sky-900/50 rounded-xl border border-sky-700/50">
-                    <p class="text-sky-400 font-bold mb-1">PHONE</p>
-                    <p class="text-sky-100">[กรอกเบอร์โทรศัพท์]</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-bold">
+                <div class="p-4 bg-gray-900 border-2 border-gray-700">
+                    <p class="text-[#CCFF00] text-[10px] uppercase mb-1">PHONE</p>
+                    <p class="text-white text-sm">[กรอกเบอร์โทรศัพท์]</p>
                 </div>
-                <div class="p-4 bg-sky-900/50 rounded-xl border border-sky-700/50">
-                    <p class="text-sky-400 font-bold mb-1">EMAIL</p>
-                    <p class="text-sky-100">[กรอกอีเมล]</p>
+                <div class="p-4 bg-gray-900 border-2 border-gray-700">
+                    <p class="text-[#CCFF00] text-[10px] uppercase mb-1">EMAIL</p>
+                    <p class="text-white text-sm truncate">[กรอกอีเมล]</p>
                 </div>
-                <div class="p-4 bg-sky-900/50 rounded-xl border border-sky-700/50">
-                    <p class="text-sky-400 font-bold mb-1">INSTAGRAM</p>
-                    <p class="text-sky-100">[กรอก Instagram]</p>
+                <div class="p-4 bg-gray-900 border-2 border-gray-700">
+                    <p class="text-[#CCFF00] text-[10px] uppercase mb-1">SOCIAL / IG</p>
+                    <p class="text-white text-sm truncate">[กรอก Instagram / Line]</p>
                 </div>
             </div>
 
-            <p class="text-[10px] text-sky-400/50 text-center pt-2">© Candidate Portfolio. Prepared for University Admission.</p>
+            <p class="text-[10px] text-gray-500 text-center uppercase tracking-widest pt-2">
+                © CANDIDATE PORTFOLIO. ALL RIGHTS RESERVED.
+            </p>
         </footer>
 
     </div>
 
-    <!-- 🛑 LIGHTBOX MODAL (หน้าต่างซูมรูปใหญ่) -->
-    <div id="art-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-sky-950/80 backdrop-blur-md transition-opacity duration-300 opacity-0" onclick="closeModal()">
-        <button class="absolute top-6 right-6 bg-sky-900 text-white hover:bg-sky-800 w-12 h-12 rounded-full text-xl shadow-2xl flex items-center justify-center font-bold border border-sky-500/40" onclick="closeModal()">✕</button>
+    <!-- 🛑 LIGHTBOX MODAL -->
+    <div id="art-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm" onclick="closeModal()">
+        <button class="absolute top-6 right-6 brutal-btn text-black w-12 h-12 text-xl flex items-center justify-center font-black" onclick="closeModal()">✕</button>
         
-        <div class="bg-slate-900 text-white rounded-3xl p-5 max-w-md w-full shadow-2xl border-2 border-sky-500/40 flex flex-col items-center" onclick="event.stopPropagation()">
-            <div class="w-full aspect-a4 overflow-hidden rounded-2xl bg-sky-950/50 flex items-center justify-center border border-sky-800/50">
+        <div class="bg-white text-black p-4 max-w-md w-full border-4 border-black shadow-[10px_10px_0px_0px_#CCFF00] flex flex-col items-center" onclick="event.stopPropagation()">
+            <div class="w-full aspect-a4 overflow-hidden bg-gray-200 border-2 border-black flex items-center justify-center">
                 <img id="modal-img" src="" alt="Zoom Image" class="w-full h-full object-contain">
             </div>
-            <div class="p-4 text-center w-full">
-                <h3 id="modal-title" class="text-lg font-bold text-sky-200"></h3>
-                <p id="modal-desc" class="text-xs text-sky-300/70 mt-1.5"></p>
+            <div class="p-3 text-center w-full">
+                <h3 id="modal-title" class="text-base font-black uppercase text-black"></h3>
+                <p id="modal-desc" class="text-xs font-bold text-gray-600 mt-1"></p>
             </div>
         </div>
     </div>
 
     <!-- 🛠️ JAVASCRIPT -->
     <script>
-        // 📌 แก้ไขที่อยู่รูปภาพ (img) และ ชื่อผลงาน (title) ตรงนี้ได้เลยครับ
+        // 📌 แก้ไขไฟล์รูปภาพ (img) และชื่อผลงาน (title) ตรงนี้ได้เลยครับ
         const artworks = [
-            { img: "path/to/image1.jpg", title: "01 | Statement of Purpose", desc: "[คำอธิบายเพิ่มเติม]" },
-            { img: "path/to/image2.jpg", title: "ผลงานชิ้นที่ 02", desc: "" },
-            { img: "path/to/image3.jpg", title: "ผลงานชิ้นที่ 03", desc: "" },
-            { img: "path/to/image4.jpg", title: "ผลงานชิ้นที่ 04", desc: "" },
-            { img: "path/to/image5.jpg", title: "ผลงานชิ้นที่ 05", desc: "" },
-            { img: "path/to/image6.jpg", title: "ผลงานชิ้นที่ 06", desc: "" },
-            { img: "path/to/image7.jpg", title: "ผลงานชิ้นที่ 07", desc: "" },
-            { img: "path/to/image8.jpg", title: "ผลงานชิ้นที่ 08", desc: "" },
-            { img: "path/to/image9.jpg", title: "ผลงานชิ้นที่ 09", desc: "" },
-            { img: "path/to/image10.jpg", title: "ผลงานชิ้นที่ 10", desc: "" }
+            { img: "path/to/image1.jpg", title: "01 | STATEMENT OF PURPOSE", desc: "[ใส่คำอธิบายผลงาน]" },
+            { img: "path/to/image2.jpg", title: "WORK NO. 02", desc: "" },
+            { img: "path/to/image3.jpg", title: "WORK NO. 03", desc: "" },
+            { img: "path/to/image4.jpg", title: "WORK NO. 04", desc: "" },
+            { img: "path/to/image5.jpg", title: "WORK NO. 05", desc: "" },
+            { img: "path/to/image6.jpg", title: "WORK NO. 06", desc: "" },
+            { img: "path/to/image7.jpg", title: "WORK NO. 07", desc: "" },
+            { img: "path/to/image8.jpg", title: "WORK NO. 08", desc: "" },
+            { img: "path/to/image9.jpg", title: "WORK NO. 09", desc: "" },
+            { img: "path/to/image10.jpg", title: "WORK NO. 10", desc: "" }
         ];
 
         function renderGallery() {
-            const grid = document.getElementById('sky-grid');
+            const grid = document.getElementById('art-grid');
             let html = '';
 
             artworks.forEach((data, index) => {
                 const displayNum = (index + 1).toString().padStart(2, '0');
 
                 html += `
-                    <div class="ice-card p-3.5 cursor-pointer flex flex-col justify-between" onclick="openModal('${data.img}', '${data.title}', '${data.desc}')">
+                    <div class="brutal-card p-3 cursor-pointer flex flex-col justify-between" onclick="openModal('${data.img}', '${data.title}', '${data.desc}')">
                         <div>
-                            <div class="flex justify-between items-center mb-2.5">
-                                <span class="text-[10px] font-black text-sky-700 bg-sky-100 px-2 py-0.5 rounded-md">NO. ${displayNum}</span>
-                                <span class="text-[10px] font-bold text-sky-400">A4</span>
+                            <!-- Header การ์ด -->
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[10px] font-black bg-black text-white px-2 py-0.5">#${displayNum}</span>
+                                <span class="text-[10px] font-extrabold text-black uppercase">A4 FORMAT</span>
                             </div>
                             
-                            <div class="w-full aspect-a4 bg-sky-50/80 rounded-xl overflow-hidden border border-sky-100 flex flex-col items-center justify-center p-2 relative text-center mb-2.5">
+                            <!-- กรอบรูป A4 -->
+                            <div class="w-full aspect-a4 bg-[#F3F0E6] border-2 border-black overflow-hidden flex flex-col items-center justify-center p-2 relative text-center mb-2.5">
                                 <img src="${data.img}" alt="${data.title}" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
-                                <span class="text-2xl mb-1 text-sky-400">📄</span>
-                                <p class="text-sky-950 font-bold text-xs">ชิ้นที่ ${displayNum}</p>
-                                <p class="text-sky-600/60 text-[10px]">[ใส่รูปภาพ]</p>
+                                <span class="text-3xl mb-1">📄</span>
+                                <p class="font-extrabold text-xs text-black uppercase">ชิ้นที่ ${displayNum}</p>
+                                <p class="text-gray-500 text-[10px] font-bold">[ ใส่รูปผลงาน ]</p>
                             </div>
 
-                            <h3 class="font-bold text-sky-950 text-xs leading-snug truncate">${data.title}</h3>
+                            <h3 class="font-black text-black text-xs leading-snug truncate uppercase">${data.title}</h3>
                         </div>
                         
-                        <div class="pt-2 mt-2 border-t border-sky-100 flex justify-between items-center">
-                            <span class="text-[10px] text-sky-600 font-semibold">ดูรายละเอียด</span>
-                            <span class="text-sky-500 font-bold text-xs">→</span>
+                        <div class="pt-2 mt-2 border-t-2 border-black flex justify-between items-center bg-[#CCFF00] -mx-3 -mb-3 p-2 border-b-0">
+                            <span class="text-[10px] font-extrabold text-black uppercase">CLICK TO VIEW</span>
+                            <span class="font-black text-xs">➔</span>
                         </div>
                     </div>
                 `;
@@ -237,17 +257,11 @@
             modalDesc.innerText = desc;
             
             modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.add('opacity-100');
-            }, 10);
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
-            modal.classList.remove('opacity-100');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
+            modal.classList.add('hidden');
             document.body.style.overflow = '';
         }
 
