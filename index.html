@@ -59,7 +59,7 @@
         <!-- 📐 MAIN SPLIT LAYOUT (แบ่งซ้าย-ขวา) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-            <!-- 📌 ฝั่งซ้าย: STICKY SIDEBAR (โปรไฟล์ + ติดต่อ ในที่เดียว) -->
+            <!-- 📌 ฝั่งซ้าย: STICKY SIDEBAR (โปรไฟล์ + ติดต่อ) -->
             <aside class="lg:col-span-4 lg:sticky lg:top-8 space-y-5">
                 
                 <!-- การ์ดโปรไฟล์หลัก -->
@@ -69,10 +69,10 @@
                     </span>
 
                     <div class="flex flex-col items-center text-center mt-3 space-y-3">
-                        <!-- 🖼️ กรอบรูปโปรไฟล์แบบเต็มรูป (ทรงสี่เหลี่ยมมุมมน 3:4) -->
-                        <div class="w-36 sm:w-44 aspect-[3/4] rounded-2xl p-1.5 bg-gradient-to-tr from-sky-400 to-cyan-200 shadow-md relative">
-                            <div class="w-full h-full rounded-xl overflow-hidden bg-sky-100 border-2 border-white relative flex items-center justify-center">
-                                <img src="images/1.jpg" alt="Profile" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                        <!-- 🖼️ กรอบรูปโปรไฟล์แบบเต็มรูป -->
+                        <div class="w-36 sm:w-44 aspect-[3/4] rounded-2xl p-1 bg-gradient-to-tr from-sky-400 to-cyan-200 shadow-md relative">
+                            <div class="w-full h-full rounded-xl overflow-hidden bg-sky-100 border border-white relative flex items-center justify-center">
+                                <img src="images/1.jpg" alt="Profile" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
                                 <span class="text-4xl text-sky-400">👤</span>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                     </span>
                 </div>
 
-                <!-- 🌟 FEATURED ITEM (ผลงานชิ้นที่ 1 เด่นพิเศษ) -->
+                <!-- 🌟 FEATURED ITEM (ผลงานชิ้นที่ 1 เด่นพิเศษ / หน้าปก) -->
                 <div class="dash-card p-5 bg-gradient-to-br from-white to-sky-50/60 cursor-pointer" onclick="openModal(artworks[0].img, artworks[0].title, artworks[0].desc)">
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xs font-semibold text-white bg-sky-500 px-3 py-0.5 rounded-full shadow-sm">
@@ -162,8 +162,9 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
                         <div class="sm:col-span-5">
-                            <div class="w-full aspect-a4 bg-sky-100 rounded-xl overflow-hidden border border-sky-200 relative flex flex-col items-center justify-center p-2 text-center">
-                                <img src="images/page1.jpg" alt="Highlight Work" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
+                            <!-- กรอบรูป A4 แบบไร้ Padding แสดงรูปเต็มช่อง 100% -->
+                            <div class="w-full aspect-a4 bg-sky-100 rounded-xl overflow-hidden border border-sky-200 relative flex flex-col items-center justify-center text-center">
+                                <img src="images/page1.jpg" alt="Highlight Work" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
                                 <span class="text-3xl text-sky-400 mb-1">📄</span>
                                 <span class="text-xs text-sky-700 font-medium">[ รูปผลงาน page1 ]</span>
                             </div>
@@ -195,10 +196,10 @@
 
     <!-- 🛑 LIGHTBOX MODAL (ป๊อปอัปดูรูปเต็ม) -->
     <div id="art-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeModal()">
-        <button class="absolute top-6 right-6 bg-white text-sky-600 hover:bg-sky-50 w-10 h-10 rounded-full text-base shadow-lg flex items-center justify-center font-bold" onclick="closeModal()">✕</button>
+        <button class="absolute top-6 right-6 bg-white text-sky-600 hover:bg-sky-50 w-10 h-10 rounded-full text-base shadow-lg flex items-center justify-center font-bold z-[110]" onclick="closeModal()">✕</button>
         
-        <div class="bg-white rounded-3xl p-4 max-w-md w-full shadow-2xl border-2 border-sky-100 flex flex-col items-center" onclick="event.stopPropagation()">
-            <div class="w-full aspect-a4 overflow-hidden rounded-2xl bg-sky-50 flex items-center justify-center border border-sky-100">
+        <div class="bg-white rounded-3xl p-3 max-w-md w-full shadow-2xl border-2 border-sky-100 flex flex-col items-center overflow-hidden" onclick="event.stopPropagation()">
+            <div class="w-full aspect-a4 overflow-hidden rounded-2xl bg-sky-50 flex items-center justify-center border border-sky-100 relative">
                 <img id="modal-img" src="" alt="Zoom Image" class="w-full h-full object-contain">
             </div>
             <div class="p-3 text-center w-full">
@@ -210,7 +211,7 @@
 
     <!-- 🛠️ JAVASCRIPT -->
     <script>
-        // 📌 แก้ไขที่อยู่รูปภาพ (page1.jpg - page8.jpg) และ ชื่อผลงานได้ที่นี่
+        // 📌 ที่อยู่ไฟล์รูปภาพ (page1.jpg - page8.jpg)
         const artworks = [
             { img: "images/page1.jpg", title: "01 | STATEMENT OF PURPOSE", desc: "[คำอธิบายผลงานชิ้นที่ 1]" },
             { img: "images/page2.jpg", title: "ผลงานชิ้นที่ 02", desc: "" },
@@ -226,7 +227,7 @@
             const grid = document.getElementById('feed-grid');
             let html = '';
 
-            // แสดงเฉพาะชิ้นที่ 2 ถึง 8 ( index 1 ถึง 7 ) เพราะชิ้นแรกแสดงในโซน Highlight แล้ว
+            // แสดงเฉพาะชิ้นที่ 2 ถึง 8 ( index 1 ถึง 7 )
             artworks.slice(1).forEach((data, idx) => {
                 const actualIndex = idx + 2;
                 const displayNum = actualIndex.toString().padStart(2, '0');
@@ -239,8 +240,9 @@
                                 <span class="text-[10px] text-sky-400 font-medium">A4</span>
                             </div>
                             
-                            <div class="w-full aspect-a4 bg-sky-50 rounded-2xl overflow-hidden border border-sky-100 flex flex-col items-center justify-center p-2 relative text-center mb-2.5">
-                                <img src="${data.img}" alt="${data.title}" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
+                            <!-- กรอบรูป A4 แบบเต็มช่อง ไร้ Padding -->
+                            <div class="w-full aspect-a4 bg-sky-50 rounded-2xl overflow-hidden border border-sky-100 flex flex-col items-center justify-center relative text-center mb-2.5">
+                                <img src="${data.img}" alt="${data.title}" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
                                 <span class="text-2xl mb-1 text-sky-400">📄</span>
                                 <p class="text-sky-900 font-medium text-xs">ชิ้นที่ ${displayNum}</p>
                                 <p class="text-sky-400 text-[10px]">[ ใส่รูปผลงาน ]</p>
